@@ -11,11 +11,11 @@ This site demonstrates my personality, skills, and presents the tone I provide t
 
 **STACK**
 
--SPA with React (functonal components, hooks)
--TailwindCSS (custom tokens and theme system)
--Theme Engine (5 themes with automated color adaption per user preference )
--IntersectionObserver (based scroll nav)
--Modular component layout
+- SPA with React (functonal components, hooks)
+- TailwindCSS (custom tokens and theme system)
+- Theme Engine (5 themes with automated color adaption per user preference )
+- IntersectionObserver (based scroll nav)
+- Modular component layout
 
 ---
 
