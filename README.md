@@ -37,12 +37,12 @@ src/
 ## Theme System
 
 within index:
--5 unique themes are layed out by:
-*color-bg 
-*color-primary
-*color-text
-*color-secondary
-*color-tertiary
+# -5 unique themes are layed out by:
+# *color-bg 
+# *color-primary
+# *color-text
+# *color-secondary
+# *color-tertiary
 
 These themes are applied via html[data-theme="x"] and are used across the site for all gradients, tints, accents, etc.
 
