@@ -1,0 +1,32 @@
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build output
+dist/
+build/
+
+# Vite cache
+.vite/
+
+# VSCode settings
+.vscode/
+
+# Log files
+*.log
+
+# Environment variables
+.env
+.env.*.local
+
+# OS generated
+.DS_Store
+Thumbs.db
+
+# Optional: lock files (if you use one package manager)
+# Uncomment the ones you're not using
+# yarn.lock
+# package-lock.json
+# pnpm-lock.yaml
