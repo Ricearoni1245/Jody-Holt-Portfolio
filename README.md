@@ -36,32 +36,32 @@ src/
 
 ## Theme System
 
-within index:
-# -5 unique themes are layed out by:
-# *color-bg 
-# *color-primary
-# *color-text
-# *color-secondary
-# *color-tertiary
+### within index:
+#### 5 unique themes are layed out by:
+- color-bg 
+- color-primary
+- color-text
+- color-secondary
+- color-tertiary
 
 These themes are applied via html[data-theme="x"] and are used across the site for all gradients, tints, accents, etc.
 
 
 ## DEV NOTES as of 10/29/2025
 
--All social links are dummy values as of now.
--Section layout is controlleted via <Section id="...."></Section> wrappers.
--Images are outdated and will be replaced. 
--UI is mobile-oriented, but device friendly. 
+- All social links are dummy values as of now.
+- Section layout is controlleted via <Section id="...."></Section> wrappers.
+- Images are outdated and will be replaced.
+- UI is mobile-oriented, but device friendly. 
 
 
 ## TODO
 
--Add links to projects within cards
--Change out experiance tab for resume/skills
--Add animations
--more ways to contact
--Deploy site via personal service
+- Add links to projects within cards
+- Change out experiance tab for resume/skills
+- Add animations
+- more ways to contact
+- Deploy site via personal service
 
 
 ## View Progress
@@ -77,7 +77,7 @@ npm run dev
 
 ## Author
 
-Jody Holt
-Frontend Developer • Passion Pioneer
-[GitHub](https://github.com/Ricearoni1245) • [LinkedIn](https://www.linkedin.com/in/jody-holt-9b19b0256) • [Email](mailto:jholt1008@gmail.com)
+### Jody Holt
+### Frontend Developer • Passion Pioneer
+#### [GitHub](https://github.com/Ricearoni1245) • [LinkedIn](https://www.linkedin.com/in/jody-holt-9b19b0256) • [Email](mailto:jholt1008@gmail.com)
 
