@@ -18,20 +18,17 @@ export function Footer({
   return (
     <footer className="border-t border-secondary bg-bg px-4 py-10">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 md:flex-row">
-        {/* Left: Brand + tagline */}
         <div className="text-center md:text-left">
           <div className="text-xl font-extrabold tracking-wide text-text">Jody Holt</div>
-          <p className="text-sm text-text/70">Design • Develop • Deliver</p>
+          <p className="text-sm text-text/70">Passion Pioneer</p>
         </div>
 
-        {/* Middle: Links */}
         <nav className="flex items-center gap-5">
           <a className="text-text hover:text-primary" href="#projects">Projects</a>
           <a className="text-text hover:text-primary" href="#experience">Experience</a>
           <a className="text-text hover:text-primary" href="#home">Background</a>
         </nav>
 
-        {/* Right: Socials */}
         <div className="flex items-center gap-4 text-text">
           {socials.map((s) => (
             <a
@@ -41,7 +38,6 @@ export function Footer({
               className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-secondary hover:border-primary hover:text-primary"
               title={s.label}
             >
-              {/* replace with real SVGs later */}
               {s.icon ?? <span className="h-2.5 w-2.5 rounded-full bg-current" />}
             </a>
           ))}

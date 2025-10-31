@@ -15,12 +15,12 @@ export function Navbar({ onNav }: { onNav: (id: string) => void }) {
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-secondary bg-bg/90 backdrop-blur h-16 md:h-20">
+    <header className="sticky top-0 z-50 border-b border-secondary bg-bg/90 backdrop-blur h-16 md:h-20 font-main">
       <div className="mx-auto flex h-full max-w-7xl items-center justify-between px-4">
-        {/* Brand (stacked) */}
+        
         <div className="flex items-center gap-3">
           <div className="leading-tight">
-            <div className="text-xl md:text-2xl font-extrabold tracking-wide text-text">
+            <div className="text-xl md:text-2xl font-extrabold font-name tracking-wide text-text">
               Jody Holt
             </div>
             <div className="text-[11px] md:text-sm text-text/70">
@@ -29,7 +29,7 @@ export function Navbar({ onNav }: { onNav: (id: string) => void }) {
           </div>
         </div>
 
-        {/* Desktop nav */}
+       
         <nav className="hidden items-center gap-6 md:flex">
           {links.map((l) => (
             <button
@@ -43,7 +43,7 @@ export function Navbar({ onNav }: { onNav: (id: string) => void }) {
           <ThemeToggle />
         </nav>
 
-        {/* Mobile controls */}
+       
         <div className="md:hidden">
           <button
             aria-expanded={open}
@@ -63,8 +63,7 @@ export function Navbar({ onNav }: { onNav: (id: string) => void }) {
         </div>
       </div>
 
-      {/* Mobile dropdown */}
-      {/* Mobile dropdown */}
+  
       <div
         className={`md:hidden transition-[max-height] duration-300 ${
           open ? "max-h-96 overflow-visible" : "max-h-0 overflow-hidden"

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Oxanium:wght@200..800&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import "tailwindcss";
 
 /* Base design tokens that generate classes like bg-primary, text-text, etc. */
@@ -9,9 +10,10 @@
   --color-tertiary: #00c9a7;
   --color-contrast: #9ca3af;
 
-  --font-main: ui-sans-serif, system-ui, "Inter", "Segoe UI", sans-serif;
-  --font-title: "Nunito Sans", ui-sans-serif, system-ui, sans-serif;
-  --font-bold: "Bebas Neue", ui-sans-serif, system-ui, sans-serif;
+  --font-main: "IBM Plex Sans", sans-serif;
+  --font-title: "Oxanium", sans-serif;
+  --font-name:   "Quantico", sans-serif;  
+
 }
 
 /* A–E themes: override the same tokens inside an attribute scope */

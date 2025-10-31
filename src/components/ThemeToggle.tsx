@@ -31,7 +31,6 @@ export function ThemeToggle({ compact = false }: { compact?: boolean }) {
                     theme === t ? "outline outline-1 outline-primary" : ""
                   }`}
                 >
-                  {/* preview dot uses theme accent variables you defined per theme (optional) */}
                   <span
                     className="mr-2 inline-block h-3 w-3 rounded-full align-middle"
                     style={{ background: `var(--color-accent-${t})` }}

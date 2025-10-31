@@ -7,13 +7,13 @@ export function Hero() {
     <section className="relative w-full bg-hero">
       <div className="md:hidden flex flex-col items-center text-center gap-2 min-h-[calc(100vh-64px)] py-6">
         <h1
-          className="font-extrabold tracking-wide leading-tight text-text
+          className="font-extrabold font-title tracking-wide leading-tight text-text
                  text-2xl underline md:decoration-secondary decoration-primary"
         >
           Design. Develop. Deliver.
         </h1>
 
-        <p className="text-sm text-text/80">
+        <p className=" font-main text-sm text-text/80">
           Driven by a genuine passion for creation through code.
         </p>
 
@@ -29,17 +29,17 @@ export function Hero() {
   />
 </div>
 
-        <h2 className="mt- font-extrabold text-text leading-tight tracking-wide text-3xl">
+        <h2 className="mt- font-extrabold font-title text-text leading-tight tracking-wide text-3xl">
           Hello, I’m Jody Holt
         </h2>
 
-        <p className=" mt-5 text-lg text-base text-text/85">
+        <p className=" font-main mt-5 text-lg text-base text-text/85">
           Turning concepts into clean, functional code.
         </p>
 
-        <p className="text-2xl font-semibold text-text mt-4">It’s What I Do.</p>
+        <p className=" font-main text-2xl font-semibold text-text mt-4">It’s What I Do.</p>
 
-        <p className="mt-8 text-2xl text-text">I would love to connect!</p>
+        <p className="mt-8 text-2xl text-text font-main ">I would love to connect!</p>
 
         <div className="mt-2 mb-4 flex items-center justify-center gap-4">
           {[
@@ -68,8 +68,8 @@ export function Hero() {
 
 
 
-
-
+ {/*DESKTOP*/}
+{/*____________________________________________________________________________________________________*/}
       <div className="hidden md:block md:mx-auto max-w-7xl px-4">
         <div
           className="
@@ -90,28 +90,28 @@ export function Hero() {
           <div className="flex-1 self-start  md:pt-10 items-center text-center">
             <h1
               className="text-text font-extrabold tracking-wide leading-tight
-                           text-3xl sm:text-4xl md:text-3xl lg:text-5xl xl:text-6xl underline md:decoration-secondary decoration-primary"
+                           text-3xl sm:text-4xl md:text-3xl lg:text-5xl xl:text-6xl underline md:decoration-secondary decoration-primary font-title"
             >
               Design. Develop. Deliver.
             </h1>
 
             <p
               className="mb-10       text-text/80
-                          text-sm sm:text-base md:text-lg lg:text-xl xl:text-2"
+                          text-sm sm:text-base md:text-lg lg:text-xl xl:text-2 font-main"
             >
               Driven by a genuine passion for creation through code.
             </p>
 
             <h2
               className="font-extrabold text-text leading-tight tracking-wide mb-5
-                           text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
+                           text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-title"
             >
               Hello, I’m Jody Holt
             </h2>
 
             <p
               className="mb-3 text-text/85 md:mt-10 md:mb-5
-                          text-base md:text-xl lg:text-2xl xl:text-3xl"
+                          text-base md:text-xl lg:text-2xl xl:text-3xl font-main"
             >
               Turning concepts into clean, functional code.
             </p>
@@ -119,14 +119,14 @@ export function Hero() {
             <p
               className="mb-30 text-text/85
                           text-base md:text-3xl lg:text-4xl xl:text-5xl
-            font-semibold"
+            font-semibold font-main"
             >
               It’s What I Do.
             </p>
 
             <p
               className="mb-8 text-text
-                          text-lg md:text-4xl lg:text-5xl"
+                          text-lg md:text-4xl lg:text-5xl font-main"
             >
               I would love to connect!
             </p>
