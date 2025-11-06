@@ -15,12 +15,14 @@ export function Navbar({ onNav }: { onNav: (id: string) => void }) {
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-secondary bg-bg/90 backdrop-blur h-16 md:h-20 font-main">
-      <div className="mx-auto flex h-full max-w-7xl items-center justify-between px-4">
-        
-        <div className="flex items-center gap-3">
+     <header className="sticky top-0 z-50 border-b border-secondary bg-bg/90 
+                        backdrop-blur h-16 md:h-20 font-main w-full anim-fade-in">
+      <div className="flex h-full w-full items-center justify-between px-4 sm:px-6 
+                      md:px-10 lg:px-16">
+         <div className="flex items-center gap-3 hover-pop anim-base select-none">
           <div className="leading-tight">
-            <div className="text-xl md:text-2xl font-extrabold font-name tracking-wide text-text">
+            <div className="text-xl md:text-2xl font-extrabold font-name tracking-wide 
+                            text-text">
               Jody Holt
             </div>
             <div className="text-[11px] md:text-sm text-text/70">
@@ -29,12 +31,11 @@ export function Navbar({ onNav }: { onNav: (id: string) => void }) {
           </div>
         </div>
 
-       
         <nav className="hidden items-center gap-6 md:flex">
           {links.map((l) => (
             <button
               key={l.id}
-              className="text-text hover:text-primary"
+              className="text-text/90 hover:text-primary anim-base hover:-translate-y-[1px] focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 rounded"
               onClick={() => handleNav(l.id)}
             >
               {l.label}
@@ -43,7 +44,6 @@ export function Navbar({ onNav }: { onNav: (id: string) => void }) {
           <ThemeToggle />
         </nav>
 
-       
         <div className="md:hidden">
           <button
             aria-expanded={open}
@@ -63,7 +63,6 @@ export function Navbar({ onNav }: { onNav: (id: string) => void }) {
         </div>
       </div>
 
-  
       <div
         className={`md:hidden transition-[max-height] duration-300 ${
           open ? "max-h-96 overflow-visible" : "max-h-0 overflow-hidden"
@@ -80,7 +79,6 @@ export function Navbar({ onNav }: { onNav: (id: string) => void }) {
             </button>
           ))}
           <div className="pt-2">
-            <ThemeToggle compact />
           </div>
         </div>
       </div>

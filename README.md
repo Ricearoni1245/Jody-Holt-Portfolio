@@ -11,7 +11,7 @@ This site demonstrates my personality, skills, and presents the tone I provide t
 
 **STACK**
 
-- SPA with React (functonal components, hooks)
+- SPA with React (functional components, hooks)
 - TailwindCSS (custom tokens and theme system)
 - Theme Engine (5 themes with automated color adaption per user preference )
 - IntersectionObserver (based scroll nav)
@@ -37,7 +37,7 @@ src/
 ## Theme System
 
 ### within index:
-#### 5 unique themes are layed out by:
+#### 5 unique themes are laid out by:
 - color-bg 
 - color-primary
 - color-text
@@ -50,7 +50,7 @@ These themes are applied via html[data-theme="x"] and are used across the site f
 ## DEV NOTES as of 10/29/2025
 
 - All social links are dummy values as of now.
-- Section layout is controlleted via <Section id="...."></Section> wrappers.
+- Section layout is controlled via <Section id="...."></Section> wrappers.
 - Images are outdated and will be replaced.
 - UI is mobile-oriented, but device friendly. 
 
@@ -58,7 +58,7 @@ These themes are applied via html[data-theme="x"] and are used across the site f
 ## TODO
 
 - Add links to projects within cards
-- Change out experiance tab for resume/skills
+- Change out experience tab for resume/skills
 - Add animations
 - more ways to contact
 - Deploy site via personal service

@@ -1,47 +1,45 @@
 import React from "react";
 import profileImage from "../assets/jody.png";
 import jodyMobile from "../assets/Jody-mobile.png";
-
+import { useTheme } from "../hooks/useTheme";
 export function Hero() {
+  const { theme } = useTheme(); // "a" | "b" | "c" | "d" | "e"
   return (
-    <section className="relative w-full bg-hero">
+    <section key={theme} className="relative w-full bg-hero anim-fade-in">
       <div className="md:hidden flex flex-col items-center text-center gap-2 min-h-[calc(100vh-64px)] py-6">
         <h1
           className="font-extrabold font-title tracking-wide leading-tight text-text
-                 text-2xl underline md:decoration-secondary decoration-primary"
+                 text-2xl underline md:decoration-secondary decoration-primary anim-pop-in"
         >
           Design. Develop. Deliver.
         </h1>
 
-        <p className=" font-main text-sm text-text/80">
+        <p className=" font-main text-sm text-text/80 anim-fade-in">
           Driven by a genuine passion for creation through code.
         </p>
 
-        <div className="relative h-68 w-68 rounded-full overflow-hidden mb-2">
+        <div className="relative h-48 w-48 rounded-full overflow-hidden mb-2 anim-pop-in float-idle">
+          <div className="absolute inset-0 rounded-full img-glow" />
 
-  <div className="absolute inset-0 rounded-full img-glow" />    
+          <img
+            src={jodyMobile}
+            alt="Jody Holt"
+            className="relative z-[1] h-full w-full object-cover select-none pointer-events-none will-change-transform"
+          />
+        </div>
 
-
-  <img
-    src={jodyMobile}                      
-    alt="Jody Holt"
-    className="relative z-[1] h-full w-full object-cover select-none pointer-events-none"
-  />
-</div>
-
-        <h2 className="mt- font-extrabold font-title text-text leading-tight tracking-wide text-3xl">
+        <h2 className="mt- font-extrabold font-title text-text leading-tight tracking-wide text-3xl anim-fade-in">
           Hello, I’m Jody Holt
         </h2>
 
-        <p className=" font-main mt-5 text-lg text-base text-text/85">
+        <p className=" font-main mt-2 text-[22px] text-base text-text/85 anim-fade-in">
           Turning concepts into clean, functional code.
         </p>
 
-        <p className=" font-main text-2xl font-semibold text-text mt-4">It’s What I Do.</p>
+     
+       
 
-        <p className="mt-8 text-2xl text-text font-main ">I would love to connect!</p>
-
-        <div className="mt-2 mb-4 flex items-center justify-center gap-4">
+        <div className="mt-5 mb-4 flex items-center justify-center gap-4">
           {[
             { label: "GitHub", href: "#" },
             { label: "LinkedIn", href: "#" },
@@ -51,7 +49,10 @@ export function Hero() {
               key={a.label}
               href={a.href}
               aria-label={a.label}
-              className="inline-flex h-12 w-12 items-center justify-center rounded-lg border border-secondary/70 bg-secondary/20 text-text hover:border-primary hover:text-primary transition"
+              className="inline-flex h-12 w-12 items-center justify-center rounded-lg 
+              border border-secondary/70 bg-secondary/20 text-text anim-base icon-hover 
+              hover:border-primary hover:text-primary focus:outline-none focus-visible:ring-2 
+              focus-visible:ring-primary/60"
             >
               <span className="h-3 w-3 rounded-full bg-current" />
             </a>
@@ -59,79 +60,58 @@ export function Hero() {
         </div>
       </div>
 
+      {/*DESKTOP*/}
+      {/*____________________________________________________________________________________________________*/}
+      <div
+        className=" md:flex md:flex-col items-center hidden md: md:mx-auto px-4 w-full sm:h-[calc(100vh-80px)] 
+                      overflow-hidden"
+      >
+        <h1
+          className="text-text font-extrabold tracking-wide leading-tight
+                           text-3xl sm:text-4xl md:text-3xl lg:text-5xl xl:text-6xl 
+                           underline md:decoration-secondary decoration-primary font-title 
+                           text-center lg:pt-2 xl:pt-7 anim-pop-in "
+        >
+          Design. Develop. Deliver.
+        </h1>
+        <p
+          className="text-text/80 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 
+                      font-main text-center anim-fade-in"
+        >
+          Driven by a genuine passion for creation through code.
+        </p>
 
-
-
-
-
-
-
-
-
- {/*DESKTOP*/}
-{/*____________________________________________________________________________________________________*/}
-      <div className="hidden md:block md:mx-auto max-w-7xl px-4">
         <div
           className="
-      min-h-[calc(100vh-64px)]
-      md:min-h-[calc(100vh-80px)]
-      flex flex-col md:flex-row items-start gap-10 lg:gap-10
-      py-8 md:py-1
-    "
+            flex  items-center justify-evenly 
+            w-full max-h-[calc(auto-400px) lg:px-5 xl:px-20"
         >
-          <div className="shrink-0 self-start lg:pl-20">
-            <img
-              src={profileImage}
-              alt="Jody Holt"
-              className="w-[240px] sm:h-[280px] md:h-[700px] lg:h-[780px] xl:g-[800px] h-auto object-contain select-none pointer-events-none"
-            />
-          </div>
-
-          <div className="flex-1 self-start  md:pt-10 items-center text-center">
-            <h1
-              className="text-text font-extrabold tracking-wide leading-tight
-                           text-3xl sm:text-4xl md:text-3xl lg:text-5xl xl:text-6xl underline md:decoration-secondary decoration-primary font-title"
+          <div className="self-end flex flex-col items-start lg:gap-1 mb-8 lg: items-center 
+                          lg:pb-22 2xl:pb-30  ">
+            <h5
+              className="font-semi-bold text-text 
+                           text-2xl sm:text-3xl md:text-2xl lg:text-2xl xl:text-4xl 
+                           font-title text-left"
             >
-              Design. Develop. Deliver.
-            </h1>
-
-            <p
-              className="mb-10       text-text/80
-                          text-sm sm:text-base md:text-lg lg:text-xl xl:text-2 font-main"
-            >
-              Driven by a genuine passion for creation through code.
-            </p>
-
+              Hello,
+            </h5>
             <h2
-              className="font-extrabold text-text leading-tight tracking-wide mb-5
-                           text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-title"
+              className="font-extrabold text-text leading-tight tracking-wide 
+                           text-2xl sm:text-3xl md:text-3xl lg:text-5xl xl:text-8xl 
+                           font-title text-left"
             >
-              Hello, I’m Jody Holt
+              I’m Jody Holt
             </h2>
 
             <p
-              className="mb-3 text-text/85 md:mt-10 md:mb-5
-                          text-base md:text-xl lg:text-2xl xl:text-3xl font-main"
+              className="mb-3 text-text/85 md:mt-2
+                          text-base md:text-xl lg:text-2xl xl:text-4xl font-main"
             >
               Turning concepts into clean, functional code.
             </p>
 
-            <p
-              className="mb-30 text-text/85
-                          text-base md:text-3xl lg:text-4xl xl:text-5xl
-            font-semibold font-main"
-            >
-              It’s What I Do.
-            </p>
-
-            <p
-              className="mb-8 text-text
-                          text-lg md:text-4xl lg:text-5xl font-main"
-            >
-              I would love to connect!
-            </p>
-
-            <div className="flex items-center justify-center gap-4 md:gap-6">
+       
+            <div className="flex  self-start items-center justify-start gap-4 md:gap-6 mt-5">
               {[
                 { label: "GitHub", href: "#" },
                 { label: "LinkedIn", href: "#" },
@@ -140,9 +120,11 @@ export function Hero() {
                 <a
                   key={a.label}
                   href={a.href}
-                  className="inline-flex items-center justify-center rounded-xl border border-secondary/70 bg-secondary/20 text-text transition
-                             h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 lg:h-16 lg:w-16
-                             hover:border-primary hover:text-primary"
+                  className="inline-flex items-center justify-center rounded-xl border 
+                  border-secondary/70 bg-secondary/20 text-text transition h-10 w-10 
+                  sm:h-12 sm:w-12 md:h-14 md:w-14 lg:h-16 lg:w-16 hover:border-primary 
+                  hover:text-primary anim-base icon-hover focus:outline-none 
+                  focus-visible:ring-2 focus-visible:ring-primary/60"
                   aria-label={a.label}
                   title={a.label}
                 >
@@ -150,6 +132,14 @@ export function Hero() {
                 </a>
               ))}
             </div>
+          </div>
+          <div className=" justify-start ">
+            <img
+              src={profileImage}
+              alt="Jody Holt"
+              className="lg:max-h-[78vh] sm:max-h-[50vh] h-auto object-contain select-none 
+                         pointer-events-none anim-pop-in will-change-transform"
+            />
           </div>
         </div>
       </div>
