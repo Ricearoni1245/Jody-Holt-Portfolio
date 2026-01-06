@@ -2,6 +2,15 @@
 import React from "react";
 import { useTheme } from "../hooks/useTheme";
 
+// Actual primary colors for each theme
+const themeColors: Record<string, { primary: string; label: string }> = {
+  a: { primary: "#3d8eff", label: "Blue" },
+  b: { primary: "#ff7043", label: "Ember" },
+  c: { primary: "#00a3c4", label: "Teal" },
+  d: { primary: "#7743d8", label: "Violet" },
+  e: { primary: "#00d2a2", label: "Emerald" },
+};
+
 export function ThemeToggle({ compact = false }: { compact?: boolean }) {
   const { theme, setTheme } = useTheme();
   const themes = ["a", "b", "c", "d", "e"] as const;
@@ -55,9 +64,9 @@ export function ThemeToggle({ compact = false }: { compact?: boolean }) {
                 >
                   <span
                     className="mr-2 inline-block h-3 w-3 rounded-full align-middle"
-                    style={{ background: `var(--color-accent-${t}, var(--color-primary))` }}
+                    style={{ background: themeColors[t].primary }}
                   />
-                  Theme {t.toUpperCase()}
+                  {themeColors[t].label}
                 </button>
               </li>
             ))}

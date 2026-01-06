@@ -85,29 +85,30 @@ html[data-theme="e"] {
             100%
         );
   }
-}
-/* Desktop override */
-@media (min-width: 768px) {
-  .bg-hero {
-    background:
-      /* small, softer highlight lower than the portrait rim */ radial-gradient(
-        95% 70% at 50% 28%,
-        color-mix(in oklab, var(--hero-core) 24%, transparent 82%) 0%,
-        transparent 56%
-      ),
-      /* gentle bottom vignette for depth */
-        radial-gradient(
-          130% 90% at 50% 120%,
-          rgba(0, 0, 0, 0.32) 0%,
-          rgba(0, 0, 0, 0) 58%
+
+  /* Desktop override */
+  @media (min-width: 768px) {
+    .bg-hero {
+      background:
+        /* small, softer highlight lower than the portrait rim */ radial-gradient(
+          95% 70% at 50% 28%,
+          color-mix(in oklab, var(--hero-core) 24%, transparent 82%) 0%,
+          transparent 56%
         ),
-      /* base linear sweep */
-        linear-gradient(
-          185deg,
-          #0b0f15 0%,
-          var(--color-bg) 40%,
-          color-mix(in oklab, var(--hero-core) 12%, var(--color-bg) 88%) 100%
-        );
+        /* gentle bottom vignette for depth */
+          radial-gradient(
+            130% 90% at 50% 120%,
+            rgba(0, 0, 0, 0.32) 0%,
+            rgba(0, 0, 0, 0) 58%
+          ),
+        /* base linear sweep */
+          linear-gradient(
+            185deg,
+            #0b0f15 0%,
+            var(--color-bg) 40%,
+            color-mix(in oklab, var(--hero-core) 12%, var(--color-bg) 88%) 100%
+          );
+    }
   }
 }
 

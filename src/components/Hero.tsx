@@ -1,7 +1,20 @@
 import React from "react";
-import profileImage from "../assets/jody.png";
-import jodyMobile from "../assets/Jody-mobile.png";
+import profileImage from "../assets/img/Jody.png";
+import jodyMobile from "../assets/img/Jody-mobile.png";
 import { useTheme } from "../hooks/useTheme";
+import githubIcon from "../assets/img/github-icon.png";
+import linkedInIcon from "../assets/img/linkedin-icon.png";
+import emailIcon from "../assets/img/email-icon.png";
+import facebookIcon from "../assets/img/facebook-icon.png";
+import phoneIcon from "../assets/img/phone-icon.png";
+
+const socialLinks = [
+  { label: "GitHub", href: "https://github.com/Ricearoni1245", icon: githubIcon },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/jody-holt-9b19b0256", icon: linkedInIcon },
+  { label: "Facebook", href: "https://www.facebook.com/jody.holt.7161/", icon: facebookIcon },
+  { label: "Email", href: "mailto:jholt1008@gmail.com", icon: emailIcon },
+  { label: "Phone", href: "tel:8066542813", icon: phoneIcon },
+];
 export function Hero() {
   const { theme } = useTheme(); // "a" | "b" | "c" | "d" | "e"
   return (
@@ -40,21 +53,19 @@ export function Hero() {
        
 
         <div className="mt-5 mb-4 flex items-center justify-center gap-4">
-          {[
-            { label: "GitHub", href: "#" },
-            { label: "LinkedIn", href: "#" },
-            { label: "Email", href: "#" },
-          ].map((a) => (
+          {socialLinks.map((a) => (
             <a
               key={a.label}
               href={a.href}
+              target={a.href.startsWith("mailto:") || a.href.startsWith("tel:") ? undefined : "_blank"}
+              rel={a.href.startsWith("mailto:") || a.href.startsWith("tel:") ? undefined : "noopener noreferrer"}
               aria-label={a.label}
               className="inline-flex h-12 w-12 items-center justify-center rounded-lg 
               border border-secondary/70 bg-secondary/20 text-text anim-base icon-hover 
               hover:border-primary hover:text-primary focus:outline-none focus-visible:ring-2 
               focus-visible:ring-primary/60"
             >
-              <span className="h-3 w-3 rounded-full bg-current" />
+              <img src={a.icon} alt={a.label} className="h-6 w-6 invert brightness-0 invert opacity-90" />
             </a>
           ))}
         </div>
@@ -112,14 +123,12 @@ export function Hero() {
 
        
             <div className="flex  self-start items-center justify-start gap-4 md:gap-6 mt-5">
-              {[
-                { label: "GitHub", href: "#" },
-                { label: "LinkedIn", href: "#" },
-                { label: "Email", href: "#" },
-              ].map((a) => (
+              {socialLinks.map((a) => (
                 <a
                   key={a.label}
                   href={a.href}
+                  target={a.href.startsWith("mailto:") || a.href.startsWith("tel:") ? undefined : "_blank"}
+                  rel={a.href.startsWith("mailto:") || a.href.startsWith("tel:") ? undefined : "noopener noreferrer"}
                   className="inline-flex items-center justify-center rounded-xl border 
                   border-secondary/70 bg-secondary/20 text-text transition h-10 w-10 
                   sm:h-12 sm:w-12 md:h-14 md:w-14 lg:h-16 lg:w-16 hover:border-primary 
@@ -128,7 +137,7 @@ export function Hero() {
                   aria-label={a.label}
                   title={a.label}
                 >
-                  <span className="h-2.5 w-2.5 rounded-full bg-current" />
+                  <img src={a.icon} alt={a.label} className="h-6 w-6 md:h-8 md:w-8 lg:h-10 lg:w-10 invert brightness-0 invert opacity-90" />
                 </a>
               ))}
             </div>

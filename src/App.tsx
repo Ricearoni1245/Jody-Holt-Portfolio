@@ -2,7 +2,8 @@ import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Navbar } from "./components/Navbar";
 import { Section } from "./components/Section";
 import { Hero } from "./components/Hero";
-import { Placeholder } from "./components/Placeholder";
+import { Projects } from "./components/Projects";
+import { Resume } from "./components/Resume";
 import { Footer } from "./components/Footer"; 
 
 export default function App() {
@@ -46,9 +47,9 @@ return (
 <main>
 <Section id="home"><Hero /></Section>
 <GradientBand />
-<Section id="projects"><Placeholder title="Projects" /></Section>
+<Section id="projects"><Projects /></Section>
 <GradientBand />
-<Section id="experience"><Placeholder title="Experience" /></Section>
+<Section id="experience"><Resume /></Section>
 </main>
 
 

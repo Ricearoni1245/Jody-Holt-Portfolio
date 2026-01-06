@@ -1,14 +1,23 @@
 import React from "react";
+import githubIcon from "../assets/img/github-icon.png";
+import linkedInIcon from "../assets/img/linkedin-icon.png";
+import emailIcon from "../assets/img/email-icon.png";
+import facebookIcon from "../assets/img/facebook-icon.png";
+import phoneIcon from "../assets/img/phone-icon.png";
 
-type Social = { label: string; href: string; icon?: React.ReactNode };
+const defaultSocials = [
+  { label: "GitHub", href: "https://github.com/Ricearoni1245", icon: githubIcon },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/jody-holt-9b19b0256", icon: linkedInIcon },
+  { label: "Facebook", href: "https://www.facebook.com/jody.holt.7161/", icon: facebookIcon },
+  { label: "Email", href: "mailto:jholt1008@gmail.com", icon: emailIcon },
+  { label: "Phone", href: "tel:8066542813", icon: phoneIcon },
+];
+
+type Social = { label: string; href: string; icon?: string };
 
 export function Footer({
   year = new Date().getFullYear(),
-  socials = [
-    { label: "GitHub", href: "#" },
-    { label: "LinkedIn", href: "#" },
-    { label: "Email", href: "#" },
-  ],
+  socials = defaultSocials,
   showBackToTop = true,
 }: {
   year?: number;
@@ -28,47 +37,71 @@ export function Footer({
         </div>
 
         <nav className="flex items-center gap-5">
-          <a className="text-text hover:text-primary" href="#projects">
-            Projects
-          </a>
-          <a className="text-text hover:text-primary" href="#experience">
-            Experience
-          </a>
-          <a className="text-text hover:text-primary" href="#home">
-            Background
-          </a>
-        </nav>
-
-        <div className="flex items-center gap-4 text-text">
-          {socials.map((s) => (
-            <a
-              key={s.label}
-              href={s.href}
-              aria-label={s.label}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-secondary hover:border-primary hover:text-primary"
-              title={s.label}
+            <button
+              className="text-text hover:text-primary anim-base"
+              onClick={() => document.getElementById("home")?.scrollIntoView({ behavior: "smooth" })}
             >
-              {s.icon ?? (
-                <span className="h-2.5 w-2.5 rounded-full bg-current" />
-              )}
-            </a>
-          ))}
-        </div>
-      </div>
+              Background
+            </button>
+            <button
+              className="text-text hover:text-primary anim-base"
+              onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
+            >
+              Projects
+            </button>
+            <button
+              className="text-text hover:text-primary anim-base"
+              onClick={() => document.getElementById("experience")?.scrollIntoView({ behavior: "smooth" })}
+            >
+              Experience
+            </button>
+          </nav>
 
-      <div className="mx-auto mt-6 flex max-w-7xl items-center justify-center gap-4">
-        <div className="text-center text-xs text-text/60">
-          © {year} Jody Holt • All rights reserved
+          <div className="flex items-center gap-4 text-text">
+            {socials.map((s) => (
+              <a
+                key={s.label}
+                href={s.href}
+                target={s.href.startsWith("mailto:") || s.href.startsWith("tel:") ? undefined : "_blank"}
+                rel={s.href.startsWith("mailto:") || s.href.startsWith("tel:") ? undefined : "noopener noreferrer"}
+                aria-label={s.label}
+                className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-secondary hover:border-primary hover:text-primary anim-base"
+                title={s.label}
+              >
+                {s.icon ? (
+                  <img src={s.icon} alt={s.label} className="h-5 w-5 invert brightness-0 invert opacity-80" />
+                ) : (
+                  <span className="h-2.5 w-2.5 rounded-full bg-current" />
+                )}
+              </a>
+            ))}
+          </div>
         </div>
-        {showBackToTop && (
-          <button
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="rounded px-3 py-1 text-xs text-text/70 hover:text-primary border border-secondary hover:border-primary"
+
+        <div className="mx-auto mt-6 flex max-w-7xl items-center justify-center gap-4">
+          <div className="text-center text-xs text-text/60">
+            © {year} Jody Holt • All rights reserved
+          </div>
+          {showBackToTop && (
+            <button
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              className="rounded px-3 py-1 text-xs text-text/70 hover:text-primary border border-secondary hover:border-primary"
+            >
+              Back to top
+            </button>
+          )}
+        </div>
+        <div className="mx-auto mt-4 max-w-7xl text-center text-[10px] text-text/40">
+          Icons by{" "}
+          <a
+            href="https://icons8.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-primary anim-base underline"
           >
-            Back to top
-          </button>
-        )}
-      </div>
+            Icons8
+          </a>
+        </div>
     </footer>
   );
 }

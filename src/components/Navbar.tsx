@@ -15,14 +15,20 @@ export function Navbar({ onNav }: { onNav: (id: string) => void }) {
   };
 
   return (
-     <header className="sticky top-0 z-50 border-b border-secondary bg-bg/90 
-                        backdrop-blur h-16 md:h-20 font-main w-full anim-fade-in">
-      <div className="flex h-full w-full items-center justify-between px-4 sm:px-6 
-                      md:px-10 lg:px-16">
-         <div className="flex items-center gap-3 hover-pop anim-base select-none">
+    <header
+      className="sticky top-0 z-50 border-b border-secondary bg-bg/90 
+                        backdrop-blur h-16 md:h-20 font-main w-full anim-fade-in"
+    >
+      <div
+        className="flex h-full w-full items-center justify-between px-4 sm:px-6 
+                      md:px-10 lg:px-16"
+      >
+        <div className="flex items-center gap-3 hover-pop anim-base select-none">
           <div className="leading-tight">
-            <div className="text-xl md:text-2xl font-extrabold font-name tracking-wide 
-                            text-text">
+            <div
+              className="text-xl md:text-2xl font-extrabold font-name tracking-wide 
+                            text-text"
+            >
               Jody Holt
             </div>
             <div className="text-[11px] md:text-sm text-text/70">
@@ -72,13 +78,14 @@ export function Navbar({ onNav }: { onNav: (id: string) => void }) {
           {links.map((l) => (
             <button
               key={l.id}
-              className="block w-full rounded px-3 py-2 text-left text-text hover:bg-secondary/60"
+              className="block w-full rounded px-3 py-2 text-left text-text hover:bg-secondary/60 hover:text-primary anim-base"
               onClick={() => handleNav(l.id)}
             >
               {l.label}
             </button>
           ))}
           <div className="pt-2">
+            <ThemeToggle compact />{" "}
           </div>
         </div>
       </div>
