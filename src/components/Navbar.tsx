@@ -4,9 +4,9 @@ import { ThemeToggle } from "./ThemeToggle";
 export function Navbar({ onNav }: { onNav: (id: string) => void }) {
   const [open, setOpen] = useState(false);
   const links = [
-    { id: "home", label: "Background" },
+    { id: "home", label: "Intro" },
     { id: "projects", label: "Projects" },
-    { id: "experience", label: "Experience" },
+    { id: "experience", label: "Resume" },
   ];
 
   const handleNav = (id: string) => {

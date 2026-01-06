@@ -43,7 +43,7 @@ const projects: Project[] = [
     coverImageMobile: millercoverMobile,
     video: millervideo,
     videoMobile: millervideoMobile,
-    techStack: ["React", "TypeScript", "Tailwind CSS"],
+    techStack: ["HTML", "CSS", "JQuery"],
     liveUrl: "https://500nmain806.com",
   },
 ];
