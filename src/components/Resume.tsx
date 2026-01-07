@@ -41,7 +41,7 @@ const accomplishments = [
 ];
 
 const workHistory = [
-  { title: "Sandwich Artist", company: "Subway", location: "Canyon, TX", dates: "2024–Present" },
+  { title: "Training Specialist", company: "Subway", location: "Canyon, TX", dates: "2024–Present" },
   { title: "Head Lifeguard", company: "Johnson Park Youth Center", location: "Borger, TX", dates: "Seasonal 2022–2025" },
   { title: "Sacker/Grocery Stocker", company: "United Supermarkets", location: "Canyon, TX", dates: "2023–2024" },
 ];
