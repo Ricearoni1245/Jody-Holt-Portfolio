@@ -2,12 +2,14 @@ import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Navbar } from "./components/Navbar";
 import { Section } from "./components/Section";
 import { Hero } from "./components/Hero";
+
 import { Projects } from "./components/Projects";
 import { Resume } from "./components/Resume";
 import { Footer } from "./components/Footer"; 
+import { AboutMe } from "./components/AboutMe";
 
 export default function App() {
-const sections = useMemo(() => ["home", "projects", "experience"], []);
+const sections = useMemo(() => ["home", "about", "projects", "experience"], []);
 const refs = useRef<Record<string, HTMLElement | null>>({});
 const [active, setActive] = useState<string>(sections[0]);
 
@@ -44,12 +46,15 @@ return (
 <Navbar onNav={handleNav} />
 
 
+
 <main>
-<Section id="home"><Hero /></Section>
-<GradientBand />
-<Section id="projects"><Projects /></Section>
-<GradientBand />
-<Section id="experience"><Resume /></Section>
+	<Section id="home"><Hero /></Section>
+	<GradientBand />
+	<Section id="about"><AboutMe /></Section>
+	<GradientBand />
+	<Section id="projects"><Projects /></Section>
+	<GradientBand />
+	<Section id="experience"><Resume /></Section>
 </main>
 
 
