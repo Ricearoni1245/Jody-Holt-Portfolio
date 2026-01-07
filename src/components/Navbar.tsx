@@ -5,6 +5,7 @@ export function Navbar({ onNav }: { onNav: (id: string) => void }) {
   const [open, setOpen] = useState(false);
   const links = [
     { id: "home", label: "Intro" },
+    { id: "about", label: "About" },
     { id: "projects", label: "Projects" },
     { id: "experience", label: "Resume" },
   ];
