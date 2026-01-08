@@ -47,25 +47,9 @@ src/
 These themes are applied via html[data-theme="x"] and are used across the site for all gradients, tints, accents, etc.
 
 
-## DEV NOTES as of 10/29/2025
-
-- All social links are dummy values as of now.
-- Section layout is controlled via <Section id="...."></Section> wrappers.
-- Images are outdated and will be replaced.
-- UI is mobile-oriented, but device friendly. 
 
 
-## TODO
-
-- Add links to projects within cards
-- Change out experience tab for resume/skills
-- Add animations
-- more ways to contact
-- Deploy site via personal service
-
-
-## View Progress
-
+## To run on local client: 
 ```bash
 npm i
 

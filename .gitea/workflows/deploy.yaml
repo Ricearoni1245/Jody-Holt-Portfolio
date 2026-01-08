@@ -1,0 +1,25 @@
+name: Deploy Jody's App
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: vps-host
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build with Vite
+        
+        run: npx vite build
+
+      - name: Sync Files
+        run: |
+          mkdir -p /var/www/jody/dist
+          rm -rf /var/www/jody/dist/*
+          cp -r dist/* /var/www/jody/dist/
