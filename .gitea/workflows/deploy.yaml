@@ -1,0 +1,23 @@
+name: Deploy Jody's App
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: vps-host
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install and Build
+        run: |
+          npm install
+          npm run build
+
+      - name: Sync Files
+        run: |
+          # This clears the old version and puts the new one in
+          rm -rf /var/www/jody/dist
+          cp -r dist /var/www/jody/
