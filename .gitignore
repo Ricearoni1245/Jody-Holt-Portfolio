@@ -30,3 +30,5 @@ Thumbs.db
 # yarn.lock
 # package-lock.json
 # pnpm-lock.yamlw
+
+.gitea/
