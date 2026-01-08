@@ -20,6 +20,6 @@ jobs:
 
       - name: Sync Files
         run: |
-          mkdir -p /var/www/my-app/dist
-          rm -rf /var/www/my-app/dist/*
-          cp -r dist/* /var/www/my-app/dist/
+          mkdir -p /var/www/jody/dist
+          rm -rf /var/www/jody/dist/*
+          cp -r dist/* /var/www/jody/dist/
